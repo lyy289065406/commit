@@ -23,7 +23,7 @@ jobs:
     - name: build
       uses: github-actions-x/hugo@master
     - name: push
-      uses: github-actions-x/commit@v2.6
+      uses: lyy289065406/commit@v3
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'master'
@@ -63,10 +63,12 @@ jobs:
         run: |
           npm run generate-some-files-for-specific-node-version
       - name: push
-        uses: github-actions-x/commit@v2.6
+        uses: lyy289065406/commit@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: master
           commit-message: '${{ matrix.node-version }} adds auto-generated benchmarks and bar graph'
           rebase: 'true' # pull abd rebase before commit
 ```
+
+> About the GITHUB_TOKEN you can see [this](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
