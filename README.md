@@ -20,8 +20,6 @@ jobs:
       uses: actions/checkout@master
       with:
         ref: master
-    - name: build
-      uses: github-actions-x/hugo@master
     - name: push
       uses: lyy289065406/commit@v3
       with:
